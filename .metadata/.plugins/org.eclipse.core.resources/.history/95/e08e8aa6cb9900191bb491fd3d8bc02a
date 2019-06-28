@@ -1,0 +1,26 @@
+package com.br.projeto.pizza.model;
+
+public class pizzaModel {
+	
+	private String nome;
+	private String sabor;
+	private String massa;
+	private String borda;
+	private double valor;
+	
+	
+	public pizzaModel() {
+		
+	}
+
+
+	public pizzaModel(String nome, String massa, String sabor, String borda, int valor) {
+		this.nome = nome;
+		this.sabor = sabor;
+		this.massa = massa;
+		this.borda = borda;
+		this.valor = valor;
+	}
+	
+	public String
+}

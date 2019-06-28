@@ -1,0 +1,11 @@
+package com.br.projeto.pizza.service;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class pizzaService {
+	
+	private Map<Integer, pizza>
+}

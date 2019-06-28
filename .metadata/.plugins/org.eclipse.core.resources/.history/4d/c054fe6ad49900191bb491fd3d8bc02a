@@ -1,0 +1,14 @@
+package com.br.projeto.pizza.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.br.projeto.pizza.model.PizzaModel;
+
+@Controller
+public class PizzaController {
+	
+	@Autowired
+	private PizzaModel pizzaModel;
+}

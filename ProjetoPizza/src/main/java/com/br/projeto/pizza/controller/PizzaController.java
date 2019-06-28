@@ -1,0 +1,37 @@
+package com.br.projeto.pizza.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.br.projeto.pizza.model.PizzaModel;
+import com.br.projeto.pizza.service.PizzaService;
+
+@Controller
+public class PizzaController {
+	
+	@Autowired
+	private PizzaService pizzaService;
+	
+	@GetMapping("/")
+	public ModelAndView voltarPizzas() {
+		ModelAndView modelAndView = new ModelAndView("pizzas.html");
+		modelAndView.addObject("listapizzas" , pizzaService.voltarpizzas() );
+		return modelAndView;
+	}
+	
+	@GetMapping("/novasPizzas")
+	public ModelAndView criacao() {
+		ModelAndView modelANdView = new ModelAndView("novasPizzas.html");
+		return modelANdView;
+	}
+	
+	@PostMapping("/novasPizzas")
+	public String  salvarPizza(PizzaModel pizzaModel) {
+		pizzaService.salvarPizzas(pizzaModel);
+		return "redirect:/";
+	}
+}

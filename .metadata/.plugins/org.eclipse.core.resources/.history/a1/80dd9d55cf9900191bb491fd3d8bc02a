@@ -1,0 +1,21 @@
+package com.br.projeto.pizza.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.br.projeto.pizza.model.PizzaModel;
+
+@Service
+public class PizzaService {
+	
+	private Map<Integer, PizzaModel> pizzas = new HashMap<Integer, PizzaModel>(){
+		{
+			put(1, new PizzaModel( sabor, massa, borda, valor))
+		}
+		
+		
+		
+	};
+}
